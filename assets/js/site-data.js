@@ -16,7 +16,7 @@ window.ARDA_SITE = {
       role: "Mix & Mastering",
       url: "works/vodyanitsa-cover/",
       externalUrl: "https://www.youtube.com/watch?v=qoE36zfka1g",
-      image: "https://img.youtube.com/vi/qoE36zfka1g/hqdefault.jpg",
+      image: "assets/images/vodyanitsa-cover.jpg",
       summary: "NowiLand ekibi tarafından hazırlanan Genshin Impact 'I Loved You Vodyanitsa' Türkçe cover çalışması.",
       detail: "NowiLand ekibi tarafından hazırlanan Genshin Impact 'I Loved You Vodyanitsa' Türkçe cover çalışması.",
       showContact: false,
