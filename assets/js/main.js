@@ -15,7 +15,7 @@
   function currentTheme() {
     const saved = window.localStorage.getItem("arda-theme");
     if (saved === "dark" || saved === "light") return saved;
-    return "light";
+    return "dark"; // Varsayılan tema "dark" (koyu) olarak değiştirildi
   }
 
   function applyTheme(theme) {
