@@ -242,7 +242,9 @@
       return;
     }
 
-    const image = workImage(work);
+    const image = work.image
+      ? `<img src="${joinBase(work.image)}" alt="${work.title}" loading="lazy" decoding="async">`
+      : "";
     const embed = work.mediaType === "video" ? videoEmbed(work) : "";
     const media = embed
       ? `<figure class="detail-media">${embed}</figure>`
@@ -265,7 +267,10 @@
         ${eyebrow ? `<p class="eyebrow">${eyebrow}</p>` : ""}
         <h1>${work.title}</h1>
         <p class="lead">${detail}</p>
-        ${actions ? `<div class="detail-actions">${actions}</div>` : ""} <div class="detail-meta"> <span>${work.role}</span> ${work.year ? `<span>${work.year}</span>` : ""}
+        ${actions ? `<div class="detail-actions">${actions}</div>` : ""}
+        <div class="detail-meta">
+          <span>${work.role}</span>
+          ${work.year ? `<span>${work.year}</span>` : ""}
         </div>
       </div>
       ${media}
