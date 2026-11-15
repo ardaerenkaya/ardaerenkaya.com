@@ -279,3 +279,35 @@
 
     const types = ["All", ...new Set(listedWorks().map((work) => work.type))];
     filterBar.innerHTML = types
+      .map(
+        (type) =>
+          `<button type="button" class="${type === "All" ? "is-active" : ""}" data-filter="${type}">${type}</button>`
+      )
+      .join("");
+
+    filterBar.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-filter]");
+      if (!btn) return;
+      const active = btn.dataset.filter;
+      qsa("[data-filter]", filterBar).forEach((b) =>
+        b.classList.toggle("is-active", b === btn)
+      );
+      qsa(".work-card", list).forEach((card) => {
+        const match = active === "All" || card.dataset.type === active;
+        card.hidden = !match;
+      });
+    });
+  }
+
+  // ── init ──────────────────────────────────────────────────────────────────
+  bindThemeToggle();
+  renderSocials();
+  renderFeaturedWorks();
+  renderAllWorks();
+  renderDetail();
+  bindFilters();
+
+  qsa("[data-year]").forEach((el) => {
+    el.textContent = new Date().getFullYear();
+  });
+})();
