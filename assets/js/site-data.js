@@ -17,6 +17,8 @@ window.ARDA_SITE = {
       url: "works/vodyanitsa-cover/",
       externalUrl: "https://www.youtube.com/watch?v=qoE36zfka1g",
       image: "assets/images/vodyanitsa-cover.jpg",
+      mediaType: "video", // EKLENDİ
+      videoUrl: "https://www.youtube.com/embed/qoE36zfka1g", // EKLENDİ
       summary: "NowiLand ekibi tarafından hazırlanan Genshin Impact 'I Loved You Vodyanitsa' Türkçe cover çalışması.",
       detail: "NowiLand ekibi tarafından hazırlanan Genshin Impact 'I Loved You Vodyanitsa' Türkçe cover çalışması.",
       showContact: false,
@@ -33,10 +35,8 @@ window.ARDA_SITE = {
       url: "works/PractEar/",
       externalUrl: "https://practear.com/",
       image: "assets/images/practear-icon.webp",
-      summary:
-        "Müzisyenlerin müzik kulağını geliştirmeleri için bir mobil uygulama tasarladım ve geliştirdim.",
-      detail:
-        "Müzisyenlerin müzik kulağını geliştirmeleri için bir mobil uygulama tasarladım ve geliştirdim. Uygulama, farklı işitme becerilerine yönelik çeşitli egzersizler içeriyor."
+      summary: "Müzisyenlerin müzik kulağını geliştirmeleri için bir mobil uygulama tasarladım ve geliştirdim.",
+      detail: "Müzisyenlerin müzik kulağını geliştirmeleri için bir mobil uygulama tasarladım ve geliştirdim. Uygulama, farklı işitme becerilerine yönelik çeşitli egzersizler içeriyor."
     },
     {
       slug: "De-Noizen",
@@ -49,10 +49,8 @@ window.ARDA_SITE = {
       url: "works/De-Noizen/",
       externalUrl: "",
       image: "assets/images/de-noizen-cover.png",
-      summary:
-        "Windows ve macOS için ücretsiz yayınlanması planlanan noise reduction plug-in. Temiz, hızlı ve pratik bir denoising aracı olarak konumlanıyor.",
-      detail:
-        "de-noizen, gürültülü kayıtları basit, tek düğmeli bir arayüzle temizlemek için tasarlanmış ücretsiz, gerçek zamanlı bir gürültü azaltma eklentisidir.",
+      summary: "Windows ve macOS için ücretsiz yayınlanması planlanan noise reduction plug-in. Temiz, hızlı ve pratik bir denoising aracı olarak konumlanıyor.",
+      detail: "de-noizen, gürültülü kayıtları basit, tek düğmeli bir arayüzle temizlemek için tasarlanmış ücretsiz, gerçek zamanlı bir gürültü azaltma eklentisidir.",
       headline: "real-time dialogue noise reduction plugin",
       useCases: [
         "Arkaplan oda gürültüsü",
@@ -74,8 +72,7 @@ window.ARDA_SITE = {
         "%70-90: Gürültülü kayıtlar için daha güçlü azaltma",
         "%100: Zorlu gürültüler için maksimum azaltma"
       ],
-      recommendation:
-        "En doğal sonucu elde etmek için yaklaşık %50 seviyesinden başlamanız ve arka plan gürültüsü yeterince azalıncaya kadar miktarı kademeli olarak artırmanız önerilir.",
+      recommendation: "En doğal sonucu elde etmek için yaklaşık %50 seviyesinden başlamanız ve arka plan gürültüsü yeterince azalıncaya kadar miktarı kademeli olarak artırmanız önerilir.",
       installation: {
         windows: [
           "VST3 sürümünü Windows yükleyicisini kullanarak kurabilir veya .vst3 eklentisini manuel olarak aşağıdaki klasöre kopyalayabilirsiniz:",
@@ -95,27 +92,13 @@ window.ARDA_SITE = {
           "C:\\Program Files\\Common Files\\VST3",
           "Kurulumdan sonra DAW'ınızı açın ve eklentileri yeniden taratın."
         ],
-        security:
-          "de-noizen.vst3 dosyasının güvenlik taraması için VirusTotal sonuçlarını inceleyebilirsiniz.",
-        virusTotalUrl:
-          "https://www.virustotal.com/gui/file/9c9b23b89955bcdcb9dd0b36bac62a15a189245e7c1d415829252b7d0a592ba0"
+        security: "de-noizen.vst3 dosyasının güvenlik taraması için VirusTotal sonuçlarını inceleyebilirsiniz.",
+        virusTotalUrl: "https://www.virustotal.com/gui/file/9c9b23b89955bcdcb9dd0b36bac62a15a189245e7c1d415829252b7d0a592ba0"
       },
       downloads: [
-        {
-          label: "Windows Installer",
-          url: "downloads/de-noizen-1.0.12-windows-installer.exe",
-          note: ".exe / 1.0.12"
-        },
-        {
-          label: "Windows VST3",
-          url: "downloads/de-noizen-1.0.12-windows-vst3.zip",
-          note: ".zip / manual"
-        },
-        {
-          label: "macOS Package",
-          url: "downloads/de-noizen-1.0.12-macos-signed.pkg",
-          note: ".pkg / signed"
-        }
+        { label: "Windows Installer", url: "downloads/de-noizen-1.0.12-windows-installer.exe", note: ".exe / 1.0.12" },
+        { label: "Windows VST3", url: "downloads/de-noizen-1.0.12-windows-vst3.zip", note: ".zip / manual" },
+        { label: "macOS Package", url: "downloads/de-noizen-1.0.12-macos-signed.pkg", note: ".pkg / signed" }
       ],
       isPluginLanding: true,
       hiddenFromWorks: true
@@ -131,10 +114,8 @@ window.ARDA_SITE = {
       url: "works/52-hertz/",
       externalUrl: "",
       image: "assets/images/52-hertz.png",
-      summary:
-        "Ahmet Şenkaya tarafından yazılıp yönetilen kısa filmin ses tasarımını üstlendim.",
-      detail:
-        "Ahmet Şenkaya tarafından yazılıp yönetilen kısa filmin ses tasarımını üstlendim.",
+      summary: "Ahmet Şenkaya tarafından yazılıp yönetilen kısa filmin ses tasarımını üstlendim.",
+      detail: "Ahmet Şenkaya tarafından yazılıp yönetilen kısa filmin ses tasarımını üstlendim.",
       showContact: false
     },
     {
@@ -148,10 +129,8 @@ window.ARDA_SITE = {
       url: "works/ritzy-poker/",
       externalUrl: "https://apps.apple.com/us/app/ritzy-poker/id6739818022",
       image: "assets/images/ritzy-poker-cover.jpg",
-      summary:
-        "Ritzy Games tarafından geliştirilen Ritzy Poker oyununun ses efektlerini tasarladım.",
-      detail:
-        "Ritzy Games tarafından geliştirilen Ritzy Poker oyununun ses efektlerini tasarladım.",
+      summary: "Ritzy Games tarafından geliştirilen Ritzy Poker oyununun ses efektlerini tasarladım.",
+      detail: "Ritzy Games tarafından geliştirilen Ritzy Poker oyununun ses efektlerini tasarladım.",
       showContact: false,
       links: [
         { label: "App Store", url: "https://apps.apple.com/us/app/ritzy-poker/id6739818022" },
@@ -169,10 +148,8 @@ window.ARDA_SITE = {
       url: "works/breaworlds/",
       externalUrl: "",
       image: "assets/images/breaworlds.png",
-      summary:
-        "Bitdawn Studios tarafından geliştirilen MMO sandbox oyunu Breaworlds için bazı etkinlik tema müziklerini besteledim ve ses efektleri tasarladım.",
-      detail:
-        "Bitdawn Studios tarafından geliştirilen MMO sandbox oyunu Breaworlds için bazı etkinlik tema müziklerini besteledim ve ses efektleri tasarladım.",
+      summary: "Bitdawn Studios tarafından geliştirilen MMO sandbox oyunu Breaworlds için bazı etkinlik tema müziklerini besteledim ve ses efektleri tasarladım.",
+      detail: "Bitdawn Studios tarafından geliştirilen MMO sandbox oyunu Breaworlds için bazı etkinlik tema müziklerini besteledim ve ses efektleri tasarladım.",
       showContact: false
     },
     {
@@ -186,6 +163,8 @@ window.ARDA_SITE = {
       url: "works/seninle-olmak-var-ya/",
       externalUrl: "https://www.youtube.com/watch?v=Xub2endZM-I",
       image: "https://img.youtube.com/vi/Xub2endZM-I/hqdefault.jpg",
+      mediaType: "video", // EKLENDİ
+      videoUrl: "https://www.youtube.com/embed/Xub2endZM-I", // EKLENDİ
       summary: "Merve Yılmaz Quartet için mix çalışması.",
       detail: "Merve Yılmaz Quartet'in Seninle olmak var ya kaydı için mix çalışmasını üstlendim.",
       showContact: false,
@@ -202,6 +181,8 @@ window.ARDA_SITE = {
       url: "works/alisamadim/",
       externalUrl: "https://www.youtube.com/watch?v=NrU4uwciIGw",
       image: "https://img.youtube.com/vi/NrU4uwciIGw/hqdefault.jpg",
+      mediaType: "video", // EKLENDİ
+      videoUrl: "https://www.youtube.com/embed/NrU4uwciIGw", // EKLENDİ
       summary: "Merve Yılmaz Quartet için mix çalışması.",
       detail: "Merve Yılmaz Quartet'in Alışamadım kaydı için mix çalışmasını üstlendim.",
       showContact: false,
@@ -218,6 +199,8 @@ window.ARDA_SITE = {
       url: "works/zalim/",
       externalUrl: "https://www.youtube.com/watch?v=OU5S3kKsGY4",
       image: "https://img.youtube.com/vi/OU5S3kKsGY4/hqdefault.jpg",
+      mediaType: "video", // EKLENDİ
+      videoUrl: "https://www.youtube.com/embed/OU5S3kKsGY4", // EKLENDİ
       summary: "Merve Yılmaz Quartet için mix çalışması.",
       detail: "Merve Yılmaz Quartet'in Zalim kaydı için mix çalışmasını üstlendim.",
       showContact: false,
@@ -234,6 +217,8 @@ window.ARDA_SITE = {
       url: "works/kara-kislar/",
       externalUrl: "https://www.youtube.com/watch?v=Ebi-_JrBzaU",
       image: "https://img.youtube.com/vi/Ebi-_JrBzaU/hqdefault.jpg",
+      mediaType: "video", // EKLENDİ
+      videoUrl: "https://www.youtube.com/embed/Ebi-_JrBzaU", // EKLENDİ
       summary: "Merve Yılmaz Quartet için mix çalışması.",
       detail: "Merve Yılmaz Quartet'in Kara Kışlar kaydı için mix çalışmasını üstlendim.",
       showContact: false,
@@ -250,6 +235,8 @@ window.ARDA_SITE = {
       url: "works/don-bebegim/",
       externalUrl: "https://www.youtube.com/watch?v=KEsAHWMWtcI",
       image: "https://img.youtube.com/vi/KEsAHWMWtcI/hqdefault.jpg",
+      mediaType: "video", // EKLENDİ
+      videoUrl: "https://www.youtube.com/embed/KEsAHWMWtcI", // EKLENDİ
       summary: "Merve Yılmaz Quartet için mix çalışması.",
       detail: "Merve Yılmaz Quartet'in Dön Bebeğim kaydı için mix çalışmasını üstlendim.",
       showContact: false,
@@ -266,10 +253,8 @@ window.ARDA_SITE = {
       url: "works/kassandra/",
       externalUrl: "https://tiyatrolar.com.tr/tiyatro/kassandra-2",
       image: "assets/images/kassandra.webp",
-      summary:
-        "Kassandra, Yunan mitolojisinin trajik karakterlerini modern dünyanın popüler kültürüyle harmanlayan yenilikçi bir tiyatro oyunudur. Bu oyunun müziklerini besteledim.",
-      detail:
-        "Kassandra, Yunan mitolojisinin trajik karakterlerini modern dünyanın popüler kültürüyle harmanlayan yenilikçi bir tiyatro oyunudur. Bu oyunun müziklerini besteledim.",
+      summary: "Kassandra, Yunan mitolojisinin trajik karakterlerini modern dünyanın popüler kültürüyle harmanlayan yenilikçi bir tiyatro oyunudur. Bu oyunun müziklerini besteledim.",
+      detail: "Kassandra, Yunan mitolojisinin trajik karakterlerini modern dünyanın popüler kültürüyle harmanlayan yenilikçi bir tiyatro oyunudur. Bu oyunun müziklerini besteledim.",
       showContact: false,
       links: [{ label: "Project page", url: "https://tiyatrolar.com.tr/tiyatro/kassandra-2" }]
     },
@@ -284,10 +269,8 @@ window.ARDA_SITE = {
       url: "works/marinusun-cesur-cocuklari/",
       externalUrl: "https://biletinial.com/tr-tr/tiyatro/marinusun-cesur-cocuklari",
       image: "assets/images/marinusun-cesur-cocuklari.webp",
-      summary:
-        "Şirvan Kalenderoğlu yönetmenliğinde sahnelenen, iklim krizi, çevre bilinci ve sürdürülebilirlik temalı eğitici çocuk tiyatrosunun müziklerini besteledim.",
-      detail:
-        "Şirvan Kalenderoğlu yönetmenliğinde sahnelenen, iklim krizi, çevre bilinci ve sürdürülebilirlik temalı eğitici çocuk tiyatrosunun müziklerini besteledim.",
+      summary: "Şirvan Kalenderoğlu yönetmenliğinde sahnelenen, iklim krizi, çevre bilinci ve sürdürülebilirlik temalı eğitici çocuk tiyatrosunun müziklerini besteledim.",
+      detail: "Şirvan Kalenderoğlu yönetmenliğinde sahnelenen, iklim krizi, çevre bilinci ve sürdürülebilirlik temalı eğitici çocuk tiyatrosunun müziklerini besteledim.",
       showContact: false,
       links: [{ label: "Project page", url: "https://biletinial.com/tr-tr/tiyatro/marinusun-cesur-cocuklari" }]
     }
