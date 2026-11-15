@@ -17,8 +17,8 @@ window.ARDA_SITE = {
       url: "works/vodyanitsa-cover/",
       externalUrl: "https://www.youtube.com/watch?v=qoE36zfka1g",
       image: "assets/images/vodyanitsa-cover.jpg",
-      mediaType: "video", // EKLENDİ
-      videoUrl: "https://www.youtube.com/embed/qoE36zfka1g", // EKLENDİ
+      mediaType: "video",
+      videoUrl: "https://www.youtube.com/embed/qoE36zfka1g",
       summary: "NowiLand ekibi tarafından hazırlanan Genshin Impact 'I Loved You Vodyanitsa' Türkçe cover çalışması.",
       detail: "NowiLand ekibi tarafından hazırlanan Genshin Impact 'I Loved You Vodyanitsa' Türkçe cover çalışması.",
       showContact: false,
@@ -163,8 +163,8 @@ window.ARDA_SITE = {
       url: "works/seninle-olmak-var-ya/",
       externalUrl: "https://www.youtube.com/watch?v=Xub2endZM-I",
       image: "https://img.youtube.com/vi/Xub2endZM-I/hqdefault.jpg",
-      mediaType: "video", // EKLENDİ
-      videoUrl: "https://www.youtube.com/embed/Xub2endZM-I", // EKLENDİ
+      mediaType: "video",
+      videoUrl: "https://www.youtube.com/embed/Xub2endZM-I",
       summary: "Merve Yılmaz Quartet için mix çalışması.",
       detail: "Merve Yılmaz Quartet'in Seninle olmak var ya kaydı için mix çalışmasını üstlendim.",
       showContact: false,
@@ -181,8 +181,8 @@ window.ARDA_SITE = {
       url: "works/alisamadim/",
       externalUrl: "https://www.youtube.com/watch?v=NrU4uwciIGw",
       image: "https://img.youtube.com/vi/NrU4uwciIGw/hqdefault.jpg",
-      mediaType: "video", // EKLENDİ
-      videoUrl: "https://www.youtube.com/embed/NrU4uwciIGw", // EKLENDİ
+      mediaType: "video",
+      videoUrl: "https://www.youtube.com/embed/NrU4uwciIGw",
       summary: "Merve Yılmaz Quartet için mix çalışması.",
       detail: "Merve Yılmaz Quartet'in Alışamadım kaydı için mix çalışmasını üstlendim.",
       showContact: false,
@@ -199,8 +199,8 @@ window.ARDA_SITE = {
       url: "works/zalim/",
       externalUrl: "https://www.youtube.com/watch?v=OU5S3kKsGY4",
       image: "https://img.youtube.com/vi/OU5S3kKsGY4/hqdefault.jpg",
-      mediaType: "video", // EKLENDİ
-      videoUrl: "https://www.youtube.com/embed/OU5S3kKsGY4", // EKLENDİ
+      mediaType: "video",
+      videoUrl: "https://www.youtube.com/embed/OU5S3kKsGY4",
       summary: "Merve Yılmaz Quartet için mix çalışması.",
       detail: "Merve Yılmaz Quartet'in Zalim kaydı için mix çalışmasını üstlendim.",
       showContact: false,
@@ -217,8 +217,8 @@ window.ARDA_SITE = {
       url: "works/kara-kislar/",
       externalUrl: "https://www.youtube.com/watch?v=Ebi-_JrBzaU",
       image: "https://img.youtube.com/vi/Ebi-_JrBzaU/hqdefault.jpg",
-      mediaType: "video", // EKLENDİ
-      videoUrl: "https://www.youtube.com/embed/Ebi-_JrBzaU", // EKLENDİ
+      mediaType: "video",
+      videoUrl: "https://www.youtube.com/embed/Ebi-_JrBzaU",
       summary: "Merve Yılmaz Quartet için mix çalışması.",
       detail: "Merve Yılmaz Quartet'in Kara Kışlar kaydı için mix çalışmasını üstlendim.",
       showContact: false,
@@ -235,8 +235,8 @@ window.ARDA_SITE = {
       url: "works/don-bebegim/",
       externalUrl: "https://www.youtube.com/watch?v=KEsAHWMWtcI",
       image: "https://img.youtube.com/vi/KEsAHWMWtcI/hqdefault.jpg",
-      mediaType: "video", // EKLENDİ
-      videoUrl: "https://www.youtube.com/embed/KEsAHWMWtcI", // EKLENDİ
+      mediaType: "video",
+      videoUrl: "https://www.youtube.com/embed/KEsAHWMWtcI",
       summary: "Merve Yılmaz Quartet için mix çalışması.",
       detail: "Merve Yılmaz Quartet'in Dön Bebeğim kaydı için mix çalışmasını üstlendim.",
       showContact: false,
