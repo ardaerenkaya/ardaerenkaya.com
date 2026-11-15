@@ -7,6 +7,7 @@
   --line: #dddddd;
   --shade: #f6f6f6;
   --max: 1080px;
+  --card-media-ratio: 4 / 3;
   font-family: "Halenoir", Arial, Helvetica, sans-serif;
 }
 
@@ -79,6 +80,7 @@ main {
   flex: 1;
 }
 
+/* ── Header ───────────────────────────────────────────────── */
 .site-header {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -124,6 +126,7 @@ main {
   text-decoration: underline;
 }
 
+/* ── Theme toggle ─────────────────────────────────────────── */
 .theme-toggle {
   position: relative;
   width: 38px;
@@ -133,6 +136,7 @@ main {
   background: var(--shade);
   cursor: pointer;
   transition: background 180ms ease, border-color 180ms ease;
+  flex-shrink: 0;
 }
 
 .theme-toggle span {
@@ -150,6 +154,7 @@ main {
   transform: translateX(17px);
 }
 
+/* ── Hero (homepage) ──────────────────────────────────────── */
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 420px;
@@ -245,12 +250,14 @@ h3 {
 }
 
 .portrait-stage img {
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
   aspect-ratio: 1;
   object-fit: cover;
   filter: grayscale(1);
 }
 
+/* ── Generic section ──────────────────────────────────────── */
 .section {
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr);
@@ -277,6 +284,7 @@ h3 {
   margin-top: 22px;
 }
 
+/* ── About grid ───────────────────────────────────────────── */
 .about-grid {
   display: grid;
   gap: 32px;
@@ -290,6 +298,23 @@ h3 {
   line-height: 1.62;
 }
 
+.about-photo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 680px;
+  max-height: 420px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.14);
+}
+
+/* ── Education list ───────────────────────────────────────── */
 .education-list {
   display: grid;
   border-top: 1px solid var(--line);
@@ -312,6 +337,7 @@ h3 {
   font-weight: 400;
 }
 
+/* ── Work grid & cards ────────────────────────────────────── */
 .work-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -324,9 +350,9 @@ h3 {
 
 .work-card a {
   display: grid;
-  grid-template-rows: 210px 1fr;
+  grid-template-rows: auto 1fr;
   min-height: 100%;
-  padding: 24px;
+  padding: 20px;
   border: 1px solid var(--line);
   border-radius: 8px;
   text-decoration: none;
@@ -343,48 +369,36 @@ h3 {
   text-underline-offset: 0.15em;
 }
 
+/* Unified media container — aspect-ratio drives height for every image type */
 .work-media {
-  display: grid;
-  place-items: center;
-  min-height: 190px;
-  margin-bottom: 24px;
+  aspect-ratio: var(--card-media-ratio);
+  overflow: hidden;
+  margin-bottom: 20px;
   border-bottom: 1px solid var(--line);
-  padding-bottom: 22px;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--shade);
 }
 
 .work-media img {
-  width: auto;
-  max-width: min(100%, 300px);
-  max-height: 170px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 260ms ease;
 }
 
 .work-card a:hover .work-media img {
-  transform: scale(1.025);
+  transform: scale(1.03);
 }
 
-.work-card[data-slug="De-Noizen"] .work-media img {
-  max-height: 188px;
-}
-
-.work-card[data-type="Mix"] .work-media {
-  overflow: hidden;
-}
-
-.work-card[data-type="Mix"] .work-media img {
-  width: min(100%, 300px);
-  height: 169px;
-  max-height: none;
-  object-fit: cover;
-}
-
+/* Video placeholder inside card */
 .video-placeholder {
   display: grid;
   place-items: center;
   width: 100%;
-  min-height: 170px;
-  border: 1px solid var(--line);
+  height: 100%;
   background: var(--shade);
   color: var(--soft);
   text-align: center;
@@ -418,6 +432,7 @@ h3 {
   font-size: 0.85rem;
 }
 
+/* Video embed (detail page) */
 .video-embed {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -433,33 +448,36 @@ h3 {
   border: 0;
 }
 
+/* Text-only cards */
 .work-card.is-text-only a {
   grid-template-rows: 1fr;
   align-content: end;
-  min-height: 240px;
+  min-height: 220px;
 }
 
 .work-copy p {
-  margin: 0 0 18px;
+  margin: 0 0 14px;
   color: var(--soft);
-  font-size: 1rem;
-  line-height: 1.42;
+  font-size: 0.95rem;
+  line-height: 1.44;
 }
 
 .work-copy h3 {
-  margin-bottom: 14px;
-  font-size: 1.38rem;
+  margin-bottom: 12px;
+  font-size: 1.24rem;
+  line-height: 1.2;
   text-align: center;
 }
 
 .work-copy span {
   display: block;
-  padding-top: 14px;
+  padding-top: 12px;
   border-top: 1px solid var(--line);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   text-align: center;
 }
 
+/* ── Filter bar ───────────────────────────────────────────── */
 .tag-row {
   gap: 10px;
 }
@@ -475,7 +493,7 @@ h3 {
 }
 
 .page-hero {
-  padding: 78px 0 52px;
+  padding: 72px 0 48px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -491,17 +509,20 @@ h3 {
 .filter-bar {
   gap: 10px 18px;
   margin-bottom: 34px;
+  flex-wrap: wrap;
 }
 
 .filter-bar button {
   appearance: none;
   border: 0;
   border-bottom: 1px solid transparent;
-  padding: 0;
+  padding: 2px 0;
   background: transparent;
   color: var(--soft);
   cursor: pointer;
   font: inherit;
+  font-size: 0.95rem;
+  transition: color 150ms ease;
 }
 
 .filter-bar button.is-active {
@@ -509,43 +530,47 @@ h3 {
   border-bottom-color: var(--ink);
 }
 
+/* ── Detail page ──────────────────────────────────────────── */
 .detail-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 360px);
-  gap: 52px;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 400px);
+  gap: 56px;
   align-items: start;
-  padding: 68px 0 54px;
+  padding: 68px 0 56px;
   border-bottom: 1px solid var(--line);
 }
 
 .detail-copy h1 {
-  font-size: 4rem;
+  font-size: 3.6rem;
+  line-height: 1;
 }
 
 .back-link {
   display: inline-block;
-  margin-bottom: 42px;
+  margin-bottom: 36px;
+  font-size: 0.92rem;
 }
 
 .detail-media {
   margin: 0;
+  position: sticky;
+  top: 24px;
 }
 
+/* All detail images share the same aspect ratio for consistency */
 .detail-media img {
   width: 100%;
   height: auto;
-}
-
-.detail-media img[src*="img.youtube.com"] {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
+  border-radius: 6px;
 }
 
 .detail-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 16px;
-  margin-top: 34px;
+  margin-top: 32px;
   color: var(--soft);
   font-size: 0.92rem;
 }
@@ -575,6 +600,7 @@ h3 {
   color: var(--soft);
 }
 
+/* ── Contact ──────────────────────────────────────────────── */
 .contact-section {
   align-items: start;
 }
@@ -609,7 +635,7 @@ h3 {
 }
 
 .contact-form-section {
-  margin: 76px 0 64px;
+  margin: 72px 0 60px;
   padding: 34px;
   background: #eeeeee;
 }
@@ -675,6 +701,7 @@ h3 {
   background: #fafafa;
 }
 
+/* ── About page ───────────────────────────────────────────── */
 .about-page-hero {
   text-align: center;
 }
@@ -694,6 +721,7 @@ h3 {
   text-align: left;
 }
 
+/* ── Dark theme ───────────────────────────────────────────── */
 body.theme-dark:not(.plugin-body) {
   color-scheme: dark;
   --paper: #101113;
@@ -723,6 +751,11 @@ body.theme-dark:not(.plugin-body) .contact-form button {
   color: #101113;
 }
 
+body.theme-dark:not(.plugin-body) .about-photo img {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.42);
+}
+
+/* ── Plugin (De-Noizen) ───────────────────────────────────── */
 .plugin-body {
   color-scheme: dark;
   --paper: #0b0d11;
@@ -1199,83 +1232,45 @@ body.theme-dark:not(.plugin-body) .contact-form button {
   color: var(--ink);
 }
 
+/* ── Keyframes ────────────────────────────────────────────── */
 @keyframes pluginKnobTurn {
-  0%,
-  12% {
-    transform: rotate(-142deg);
-  }
-  62%,
-  80% {
-    transform: rotate(142deg);
-  }
-  100% {
-    transform: rotate(-142deg);
-  }
+  0%, 12% { transform: rotate(-142deg); }
+  62%, 80% { transform: rotate(142deg); }
+  100%     { transform: rotate(-142deg); }
 }
 
 @keyframes pluginArcOpen {
-  0%,
-  12% {
-    --noise-progress: 0deg;
-    opacity: 0.64;
-  }
-  62%,
-  80% {
-    --noise-progress: 284deg;
-    opacity: 1;
-  }
-  100% {
-    --noise-progress: 0deg;
-    opacity: 0.64;
-  }
+  0%, 12%  { --noise-progress: 0deg;   opacity: 0.64; }
+  62%, 80% { --noise-progress: 284deg; opacity: 1;    }
+  100%     { --noise-progress: 0deg;   opacity: 0.64; }
 }
 
 @keyframes pluginArcPulse {
-  0%,
-  100% {
-    filter: brightness(0.92);
-    opacity: 0.82;
-  }
-  50% {
-    filter: brightness(1.22);
-    opacity: 1;
-  }
+  0%, 100% { filter: brightness(0.92); opacity: 0.82; }
+  50%      { filter: brightness(1.22); opacity: 1;    }
 }
 
 @keyframes pluginWave {
-  0%,
-  100% {
-    transform: scaleY(0.58);
-    opacity: 0.42;
-  }
-  50% {
-    transform: scaleY(1);
-    opacity: 0.9;
-  }
+  0%, 100% { transform: scaleY(0.58); opacity: 0.42; }
+  50%      { transform: scaleY(1);    opacity: 0.9;  }
 }
 
 @keyframes pluginGridDrift {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 36px 54px;
-  }
+  from { background-position: 0 0; }
+  to   { background-position: 36px 54px; }
 }
 
 @keyframes pluginSweep {
-  0%,
-  100% {
-    opacity: 0;
-    transform: translateX(-38%);
-  }
-  45%,
-  65% {
-    opacity: 1;
-    transform: translateX(38%);
-  }
+  0%, 100%  { opacity: 0; transform: translateX(-38%); }
+  45%, 65%  { opacity: 1; transform: translateX(38%);  }
 }
 
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Animations ───────────────────────────────────────────── */
 @media (prefers-reduced-motion: no-preference) {
   .site-header,
   .hero,
@@ -1297,25 +1292,18 @@ body.theme-dark:not(.plugin-body) .contact-form button {
     animation: pageEnter 520ms ease both;
   }
 
-  .work-card:nth-child(2) {
-    animation-delay: 70ms;
-  }
-
-  .work-card:nth-child(3) {
-    animation-delay: 140ms;
-  }
-
-  .work-card:nth-child(4) {
-    animation-delay: 210ms;
-  }
-
-  .work-card:nth-child(5) {
-    animation-delay: 280ms;
-  }
-
-  .work-card:nth-child(6) {
-    animation-delay: 350ms;
-  }
+  /* Stagger up to 12 cards */
+  .work-card:nth-child(2)  { animation-delay:  70ms; }
+  .work-card:nth-child(3)  { animation-delay: 140ms; }
+  .work-card:nth-child(4)  { animation-delay: 210ms; }
+  .work-card:nth-child(5)  { animation-delay: 280ms; }
+  .work-card:nth-child(6)  { animation-delay: 350ms; }
+  .work-card:nth-child(7)  { animation-delay: 420ms; }
+  .work-card:nth-child(8)  { animation-delay: 490ms; }
+  .work-card:nth-child(9)  { animation-delay: 560ms; }
+  .work-card:nth-child(10) { animation-delay: 630ms; }
+  .work-card:nth-child(11) { animation-delay: 700ms; }
+  .work-card:nth-child(12) { animation-delay: 770ms; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1329,20 +1317,9 @@ body.theme-dark:not(.plugin-body) .contact-form button {
   }
 }
 
-@keyframes pageEnter {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* ── Responsive: tablet (≤ 820px) ────────────────────────── */
 @media (max-width: 820px) {
   .site-header,
-  .hero,
   .section,
   .detail-hero,
   .detail-grid,
@@ -1351,13 +1328,26 @@ body.theme-dark:not(.plugin-body) .contact-form button {
     grid-template-columns: 1fr;
   }
 
-  .site-header {
-    gap: 14px;
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 48px 0 56px;
   }
 
-  .hero {
-    gap: 34px;
-    padding: 48px 0 56px;
+  /* Portrait goes below text on mobile */
+  .portrait-stage {
+    order: 1;
+  }
+
+  .portrait-stage img {
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    filter: grayscale(1);
+  }
+
+  .site-header {
+    gap: 14px;
   }
 
   h1 {
@@ -1372,25 +1362,22 @@ body.theme-dark:not(.plugin-body) .contact-form button {
     font-size: 2.35rem;
   }
 
-  .portrait-stage img {
-    width: min(100%, 430px);
-  }
-
   .section {
     gap: 24px;
     padding: 42px 0;
   }
 
-  .work-grid {
-    grid-template-columns: 1fr;
-  }
-
   .detail-hero {
-    gap: 28px;
+    gap: 32px;
+    padding: 48px 0 40px;
   }
 
   .detail-copy h1 {
-    font-size: 3.1rem;
+    font-size: 2.9rem;
+  }
+
+  .detail-media {
+    position: static;
   }
 
   .detail-grid {
@@ -1421,8 +1408,20 @@ body.theme-dark:not(.plugin-body) .contact-form button {
   .site-footer {
     display: grid;
   }
+
+  .page-hero {
+    padding: 48px 0 32px;
+  }
 }
 
+/* ── Responsive: mobile (≤ 580px) ────────────────────────── */
+@media (max-width: 580px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Responsive: small mobile (≤ 480px) ──────────────────── */
 @media (max-width: 480px) {
   .site-header,
   .site-footer,
@@ -1430,8 +1429,16 @@ body.theme-dark:not(.plugin-body) .contact-form button {
     width: min(100% - 28px, var(--max));
   }
 
+  .brand-mark {
+    display: inline;
+  }
+
+  .brand > span:last-child {
+    display: none;
+  }
+
   .nav-links {
-    gap: 14px;
+    gap: 12px;
   }
 
   .hero-actions,
@@ -1450,11 +1457,11 @@ body.theme-dark:not(.plugin-body) .contact-form button {
 
   h2,
   .detail-copy h1 {
-    font-size: 2.25rem;
+    font-size: 2.1rem;
   }
 
   .section-heading h2 {
-    font-size: 2.25rem;
+    font-size: 2.1rem;
   }
 
   .lead {
@@ -1486,5 +1493,14 @@ body.theme-dark:not(.plugin-body) .contact-form button {
 
   .plugin-control {
     width: min(330px, 84vw);
+  }
+
+  .back-link {
+    margin-bottom: 24px;
+  }
+
+  .filter-bar {
+    gap: 8px 14px;
+    margin-bottom: 24px;
   }
 }
