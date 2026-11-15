@@ -265,10 +265,7 @@
         ${eyebrow ? `<p class="eyebrow">${eyebrow}</p>` : ""}
         <h1>${work.title}</h1>
         <p class="lead">${detail}</p>
-        ${actions ? `<div class="detail-actions">${actions}</div>` : ""}
-        <div class="detail-meta">
-          <span>${work.role}</span>
-          ${work.year ? `<span>${work.year}</span>` : ""}
+        ${actions ? `<div class="detail-actions">${actions}</div>` : ""} <div class="detail-meta"> <span>${work.role}</span> ${work.year ? `<span>${work.year}</span>` : ""}
         </div>
       </div>
       ${media}
@@ -282,48 +279,3 @@
 
     const types = ["All", ...new Set(listedWorks().map((work) => work.type))];
     filterBar.innerHTML = types
-      .map((type, index) => `<button class="${index === 0 ? "is-active" : ""}" type="button" data-filter="${type}">${type}</button>`)
-      .join("");
-
-    filterBar.addEventListener("click", (event) => {
-      const button = event.target.closest("button");
-      if (!button) return;
-      qsa("button", filterBar).forEach((item) => item.classList.toggle("is-active", item === button));
-      const filter = button.dataset.filter;
-      qsa(".work-card", list).forEach((card) => {
-        card.hidden = filter !== "All" && card.dataset.type !== filter;
-      });
-    });
-  }
-
-  function updateYear() {
-    qsa("[data-year]").forEach((item) => {
-      item.textContent = new Date().getFullYear();
-    });
-  }
-
-  function bindContactForm() {
-    const form = qs("[data-contact-form]");
-    if (!form) return;
-
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const formData = new FormData(form);
-      const name = String(formData.get("name") || "").trim();
-      const email = String(formData.get("email") || "").trim();
-      const message = String(formData.get("message") || "").trim();
-      const body = [`Name: ${name}`, `Email: ${email}`, "", message].join("\n");
-      const subject = encodeURIComponent("Website contact");
-      window.location.href = `mailto:ardaerenkayaa@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
-    });
-  }
-
-  bindThemeToggle();
-  renderSocials();
-  renderFeaturedWorks();
-  renderAllWorks();
-  renderDetail();
-  bindFilters();
-  bindContactForm();
-  updateYear();
-})();
